@@ -27,9 +27,9 @@ data, count, dictionary, reverse_dictionary = utils.build_dataset(vocabulary, 50
 print("reverse_dictionary",len(reverse_dictionary))
 
 
-for i in range(len(reverse_dictionary))]:
+for i in range(len(reverse_dictionary)):
     if(i>0):
-        reverse_list = [reverse_dictionary[str(i)] 
+        reverse_list = [reverse_dictionary[str(i)]] 
 
 
 
