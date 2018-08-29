@@ -66,7 +66,7 @@ class Model():
 
             self.state_tensor = rnn_muti.zero_state(self.batch_size,tf.float32)
 
-            output_tensor,self.outputs_state_tensor = tf.nn.dymamic_rnn(rnn_muti,data,initial_state=self.state_tensor,dtype=tf.float32)
+            output_tensor,self.outputs_state_tensor = tf.nn.dynamic_rnn(rnn_muti,data,initial_state=self.state_tensor,dtype=tf.float32)
 
             tf.summary.histogram('outputs_state_tensor',self.outputs_state_tensor)
             ##################
