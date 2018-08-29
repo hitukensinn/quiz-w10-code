@@ -59,7 +59,7 @@ class Model():
 
         with tf.variable_scope('rnn'):
             ##################
-            cell = [tf.nn.rnn_cell.DropoutWrapper(tf.nn.rnn_cell.BasicLSMCell(self.dim_embedding),
+            cell = [tf.nn.rnn_cell.DropoutWrapper(tf.nn.rnn_cell.BasicLSTMCell(self.dim_embedding),
             output_keep_prob = self.keep_prob) for i in range(self.rnn_layers)]
 
             rnn_muti = tf.nn.rnn_cell.MultiRNNCell(cell,state_is_tuple = True)

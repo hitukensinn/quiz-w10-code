@@ -9,6 +9,7 @@ import tensorflow as tf
 
 import utils
 from model import Model
+from utils import read_data
 
 from flags import parse_args
 FLAGS, unparsed = parse_args()
