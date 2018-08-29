@@ -16,13 +16,13 @@ FLAGS, unparsed = parse_args()
 logging.basicConfig(
     format='%(asctime)s - %(levelname)s - %(filename)s:%(lineno)d - %(message)s', level=logging.DEBUG)
 
+vocabulary = read_data(FLAGS.text)
+#with open(FLAGS.dictionary, encoding='utf-8') as inf:
+#    dictionary = json.load(inf, encoding='utf-8')
 
-with open(FLAGS.dictionary, encoding='utf-8') as inf:
-    dictionary = json.load(inf, encoding='utf-8')
-
-with open(FLAGS.reverse_dictionary, encoding='utf-8') as inf:
-    reverse_dictionary = json.load(inf, encoding='utf-8')
-
+#with open(FLAGS.reverse_dictionary, encoding='utf-8') as inf:
+#    reverse_dictionary = json.load(inf, encoding='utf-8')
+data, count, dictionary, reversed_dictionary = utils.build_dataset(vocabulary, 5000)
 
 reverse_list = [reverse_dictionary[str(i)]
                 for i in range(len(reverse_dictionary))]
