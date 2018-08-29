@@ -27,10 +27,8 @@ data, count, dictionary, reverse_dictionary = utils.build_dataset(vocabulary, 50
 print("reverse_dictionary",len(reverse_dictionary))
 logging.debug('==============[{0}]=============='.format(reverse_dictionary))
 
-reverse_list = []
-for i in range(len(reverse_dictionary)):
-    if isinstance(reverse_dictionary.get(str(i)),str):
-        reverse_list = [reverse_dictionary.get(str(i))]
+reverse_list = [reverse_dictionary[i]
+                for i in range(len(reverse_dictionary))]
 
 
 titles = ['江神子', '蝶恋花', '渔家傲']
