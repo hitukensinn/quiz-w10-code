@@ -26,12 +26,12 @@ vocabulary = read_data(FLAGS.text)
 data, count, dictionary, reverse_dictionary = utils.build_dataset(vocabulary, 5000)
 print("reverse_dictionary",len(reverse_dictionary))
 
-if(len(reverse_dictionary)>0):
-    reverse_list = [reverse_dictionary[str(i)] for i in range(len(reverse_dictionary))]
-    print("reverse_dictionary len >0",reverse_dictionary)
-else:
-    reverse_list = [reverse_dictionary[str(0)]]
-    print("reverse_dictionary len <0",reverse_dictionary)
+
+for i in range(len(reverse_dictionary))]:
+    if(i>0):
+        reverse_list = [reverse_dictionary[str(i)] 
+
+
 
 titles = ['江神子', '蝶恋花', '渔家傲']
 
