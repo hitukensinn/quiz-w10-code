@@ -28,9 +28,9 @@ print("reverse_dictionary",len(reverse_dictionary))
 
 reverse_list = []
 for i in range(len(reverse_dictionary)):
-    logging.debug('--------i--------',i)
+    logging.debug('i31',i)
     if isinstance(reverse_dictionary.get(str(i)),str):
-        logging.debug('--------reverse_dictionary.ge--------',reverse_dictionary.get(str(i)))
+        logging.debug('reverse_dictionary.get33',reverse_dictionary.get(str(i)))
         reverse_list = [reverse_dictionary.get(str(i))]
 
 
