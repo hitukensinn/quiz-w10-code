@@ -70,6 +70,7 @@ class Model():
 
             tf.summary.histogram('outputs_state_tensor',self.outputs_state_tensor)
             ##################
+        seq_output = tf.concat(output_tensor,1)
 
         # flatten it
         seq_output_final = tf.reshape(seq_output, [-1, self.dim_embedding])
