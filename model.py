@@ -77,8 +77,8 @@ class Model():
 
         with tf.variable_scope('softmax'):
             ##################
-            softmax_w = tf.variable(tf.truncated_normal([self.dim_embedding,self.num_words],stddev=0.1))
-            softmax_b = tf.variable(tf.zeros(self.num_words))
+            softmax_w = tf.Variable(tf.truncated_normal([self.dim_embedding,self.num_words],stddev=0.1))
+            softmax_b = tf.Variable(tf.zeros(self.num_words))
 
             tf.summary.histogram('softmax_w',softmax_w)
             tf.summary.histogram('softmax_b',softmax_b)
