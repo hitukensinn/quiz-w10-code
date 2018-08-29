@@ -29,7 +29,7 @@ print("reverse_dictionary",len(reverse_dictionary))
 
 reverse_list = [reverse_dictionary[i]
                 for i in range(len(reverse_dictionary))]
-logging.debug('==============[{0}]=============='.format(reverse_list))
+#logging.debug('==============[{0}]=============='.format(reverse_list))
 
 
 
