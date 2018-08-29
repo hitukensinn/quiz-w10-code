@@ -29,6 +29,7 @@ print("reverse_dictionary",len(reverse_dictionary))
 reverse_list = []
 for i in range(len(reverse_dictionary)):
     logging.debug('==============[{0}]=============='.format(i))
+    logging.debug('==============[{0}]=============='.format(reverse_dictionary.get(str(i))))
     if isinstance(reverse_dictionary.get(str(i)),str):
         logging.debug('==============[{0}]=============='.format(reverse_dictionary.get(str(i))))
         reverse_list = [reverse_dictionary.get(str(i))]
