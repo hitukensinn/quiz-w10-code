@@ -56,9 +56,9 @@ with tf.Session() as sess:
         for dl in utils.get_train_data(vocabulary, batch_size=FLAGS.batch_size, num_steps=FLAGS.num_steps):
 
             ##################
-            sample_len = dl.shape[i]
+            sample_len = dl.shape[1]
             dl_index = utils.index_data(dl,dictionary)
-            
+
             d_index = dl_index[:,:sample_len -1]
             l_index = dl_index[:,1:]
             feed_dic = {model.X:d_index,model.Y:l_index,model.state_tensor:state,model.keep_prob:0.5}
