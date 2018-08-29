@@ -26,7 +26,7 @@ vocabulary = read_data(FLAGS.text)
 data, count, dictionary, reverse_dictionary = utils.build_dataset(vocabulary, 5000)
 print("reverse_dictionary",len(reverse_dictionary))
 
-reverse_list = [dictionary[str(i)] for i in range(len(reverse_dictionary))]
+reverse_list = [reverse_dictionary.get(str(i)) for i in range(len(reverse_dictionary))]
 
 
 titles = ['江神子', '蝶恋花', '渔家傲']
