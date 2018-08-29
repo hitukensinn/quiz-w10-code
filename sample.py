@@ -24,14 +24,14 @@ vocabulary = read_data(FLAGS.text)
 #with open(FLAGS.reverse_dictionary, encoding='utf-8') as inf:
 #    reverse_dictionary = json.load(inf, encoding='utf-8')
 data, count, dictionary, reverse_dictionary = utils.build_dataset(vocabulary, 5000)
-print('reverse_dictionary',reverse_dictionary)
+print("reverse_dictionary",reverse_dictionary)
 
 if(len(reverse_dictionary)>0):
     reverse_list = [reverse_dictionary[str(i)] for i in range(len(reverse_dictionary))]
-    print('reverse_dictionary len >0',reverse_dictionary)
+    print("reverse_dictionary len >0",reverse_dictionary)
 else:
     reverse_list = [reverse_dictionary[str(0)]]
-    print('reverse_dictionary len <0',reverse_dictionary)
+    print("reverse_dictionary len <0",reverse_dictionary)
 
 titles = ['江神子', '蝶恋花', '渔家傲']
 
